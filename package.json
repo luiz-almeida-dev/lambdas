@@ -5,6 +5,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
+    "nanoid": "^5.1.6",
     "pg": "^8.16.3"
   }
 }
