@@ -144,16 +144,6 @@ export const handler = async () => {
     console.info(
       `Hourly aggregation completed. Products: ${prodRes.rowCount}, Galleries: ${galRes.rowCount}`
     );
-
-    return {
-      statusCode: 200,
-      body: JSON.stringify({
-        products: prodRes.rowCount,
-        galleries: galRes.rowCount,
-        from: startHour.toISOString(),
-        to: endHour.toISOString(),
-      }),
-    };
   } catch (error) {
     console.error("Hourly aggregator error:", error);
     throw error;
@@ -161,3 +151,4 @@ export const handler = async () => {
     client.release();
   }
 };
+handler();
